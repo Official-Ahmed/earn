@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    
-    <meta charset="UTF-8">
-    <title>testing</title>
-    
-  </head>
-  <body>
+    <style>
+        #text{
+            text-align:center;
+            border: 20px;
+            border:teal;
+            border-style: solid;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+        #bottombanner{
+            width: 728px;
+            text-align: center; 
+            margin-left: auto;
+            margin-right: auto;
+            font-family: verdana; 
+            font-size: 10px;
+        }
+        #calculator{
+            align-content: center;
+            display: inline-block;
+            border: teal;
+            border-style: solid;
+        }
+        #operation{
+            left: 20px;
+        }
+    </style>
 
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator beta</title>
+        <div id="text">
+            <h1>Simple Calculater</h1>
+            <p>You can add, subtract etc simple calculating only</p>
+        </div>
+    </head>
 
-    <!-- Start of adf.ly banner code -->
-    <div style="width: 728px; text-align: center; font-family: verdana; font-size: 10px;"><a href="https://join-adf.ly/23918747"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.728x90.2.gif" width="728" height="90" title="AdF.ly - shorten links and earn money!" /></a><br /><a href="https://join-adf.ly/23918747">Get paid to share your links!</a></div>
-    <!-- End of adf.ly banner code -->
-    <a href="https://join-adf.ly/23918747"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.160x600.1.png" width="160" height="600" title="AdF.ly - shorten links and earn money!" /></a>
-  </body>
-  
-<script type="text/javascript" src="https://cdn.adf.ly/js/link-converter.js">
-    var adfly_id = 23918747;
-    var adfly_advert = 'int';
-    var adfly_protocol = 'http';
-    var adfly_domain = 'adf.ly';
-    var domains = ['depositfiles.com','rapidshare.com','vip-file.com'];
-    var popunder = true;
-</script>
-  
+    <body>
+        <div>
+            <a id="leftBan" href="https://join-adf.ly/23918747" ><img border="0" src="https://cdn.adf.ly/images/banners/adfly.160x600.1.png" width="160" height="600" title="AdF.ly - shorten links and earn money!" /></a>
+            <div id="calculator">
+                <input type="number" id="X"> 
+                <input type="text" id="operation"> 
+                <input type="number" id="Y"> 
+                <button type="button" onclick="calc()">Calculate</button>
+                <h3 id="Result">Result = 0</h3>
+            </div>
+
+            <div id="bottombanner" >
+                <a href="https://join-adf.ly/23918747"><img border="0" src="https://cdn.adf.ly/images/banners/adfly.728x90.2.gif" width="728" height="90" title="AdF.ly - shorten links and earn money!" /></a><br /><a href="https://join-adf.ly/23918747">Get paid to share your links!</a>
+            </div>
+        </div>
+    </body>
+
+    <script src="func.js"></script>
+        <script type="text/javascript" src="https://cdn.adf.ly/js/link-converter.js">
+            var adfly_id = 23918747;
+            var adfly_advert = 'int';
+            var adfly_protocol = 'http';
+            var adfly_domain = 'adf.ly';
+            var domains = ['depositfiles.com','rapidshare.com','vip-file.com'];
+            var popunder = false;
+        </script>
+    
 </html>
