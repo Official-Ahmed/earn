@@ -1,18 +1,18 @@
-function jailbreaking(){
+function startJailbreak(){
     if(document.cookie.indexOf('kex=0') >= 0)
         document.location.href = '.';
     else
         document.cookie = 'kex=0';
-    </script>
-    <script>function print(){}</script>
-    <script src="common/exploit.js"></script>
-    <script src="common/helpers.js"></script>
-    <script src="common/malloc.js"></script>
-    <script src="common/rop.js"></script>
-    <script src="common/syscalls.js"></script>
-    <script src="common/syscalls2.js"></script>
-    <script src="jb/c-code.js"></script>
-    <script>
+
+    function print(){}
+    src="common/exploit.js"
+    src="common/helpers.js"
+    src="common/malloc.js"
+    src="common/rop.js"
+    src="common/syscalls.js"
+    src="common/syscalls2.js"
+    src="jb/c-code.js"
+    
     if(main_ret == 179 /* already hacked */ || main_ret == 0 /* success */)
     {
         alert("You're all set!");
