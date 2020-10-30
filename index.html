@@ -1,25 +1,51 @@
-<html>
+<html manifest="cache.manifest">
+<head>
+<title>6.72 PS4 Jailbreak</title>
+<script>
 
-    <style>
-        body{
-            text-align: center;
-        }
-        #StartBtn{
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-    </style>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Downloading Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Installing Cache";},1000);setTimeout(function(){window.msgs.innerHTML="Offline Cache Installed✔";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<script src="exp_common.js"></script>
+<script src="exp_jailbreak.js"></script>
 
-    <head>
-        <title>Jailbreak PS4 6.72</title>
-        <h1>Click on Start to Jaibreak your PS4</h1>
-    </head>
+</head>
+<body style="background-color:#1824c9;color:white;">
+<h1 style='font-size:40px;text-align:center;'>PS4 6.72 Jailbreak</h1>
+<h1 id=msgs style='font-size:30px;text-align:center;'>6.72 Exploit</h1>
+<div style="text-align:center">
+    
+<button onclick="load_exploit(); return false"> Load Jailbreak </button> >>
+<button onclick="load_HEN_unofficial(); return false"> Load HEN (Unofficial)</button> or 
+<button onclick="load_mira_unofficial(); return false"> Load Mira (Unofficial)</button> or
+<br><br><br>
+<script>
 
-    <body>
-        <button type="button" id="StartBtn" onclick='startJailbreak()'>Start</button>
-    </body>
+for(var i=40; i<=79; i++){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
+</script>
+<br>
+</div>
+<script>
 
-    <script src="func.js"></script>
+function load_exploit_HEN(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading HEN 2.1.3</h1>";
+LoadedMSG="HEN 2.1.3 Loaded ✔";ExploitMira="HEN";MiraSRC="pl_HEN.js";
+setTimeout(jailbreak,500);
+}
+
+function load_exploit_HEN_Unofficial(){
+msgs.innerHTML="<h1 style='font-size:25px;text-align:center;'>Loading HEN (Unofficial)</h1>";
+LoadedMSG="HEN (Unofficial) Loaded ✔";ExploitMira="HEN";MiraSRC="pl_hen_unofficial.js";
+setTimeout(jailbreak,500);
+}
+
+</script>
+</body>
 </html>
