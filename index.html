@@ -1,66 +1,27 @@
-<!DOCTYPE html>
 <html>
-    <style>
-        #text{
-            text-align:center;
-            border: 20px;
-            border:teal;
-            border-style: solid;
-            margin-left: 30px;
-            margin-right: 30px;
-            margin-bottom: 20px;
-        }
-        #bottombanner{
-            width: 728px;
-            text-align: center; 
-            margin-left: auto;
-            margin-right: auto;
-            font-family: verdana; 
-            font-size: 10px;
-        }
-        #calculator{
-            align-content: center;
-            display: inline-block;
-            border: teal;
-            border-style: solid;
-        }
-        #operation{
-            left: 20px;
-        }
-    </style>
-
-    <head>
-        <script type="text/javascript">
-    var adfly_id = 23918747;
-    var popunder_frequency_delay = 0;
-    var adfly_google_compliant = false;
+<body>
+<script>
+if(document.cookie.indexOf('kex=0') >= 0)
+    document.location.href = '.';
+else
+    document.cookie = 'kex=0';
 </script>
-<script src="https://cdn.adf.ly/js/display.js"></script>
-        <script data-ad-client="ca-pub-1990677360387550" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <meta charset="UTF-8">
-        <title>Calculator beta</title>
-        <div id="text">
-            <h1>Simple Calculater</h1>
-            <p>You can add, subtract etc simple calculating only</p>
-        </div>
-    </head>
-
-    <body>
-        <div>
-            <a id="leftBan" href="https://join-adf.ly/23918747" ><img border="0" src="https://cdn.adf.ly/images/banners/adfly.160x600.1.png" width="160" height="600" title="AdF.ly - shorten links and earn money!" /></a>
-            <div id="calculator">
-                <input type="number" id="X"> 
-                <input type="text" id="operation"> 
-                <input type="number" id="Y"> 
-                <button type="button" onclick="calc()">Calculate</button>
-                <h3 id="Result">Result = 0</h3>
-            </div>
-
-            <div id="bottombanner" >
-                <a href="https://info.flagcounter.com/Baap"><img src="https://s01.flagcounter.com/count/Baap/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_6/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
-
-            </div>
-        </div>
-    </body>
-    
+<script>function print(){}</script>
+<script src="common/exploit.js"></script>
+<script src="common/helpers.js"></script>
+<script src="common/malloc.js"></script>
+<script src="common/rop.js"></script>
+<script src="common/syscalls.js"></script>
+<script src="common/syscalls2.js"></script>
+<script src="jb/c-code.js"></script>
+<script>
+if(main_ret == 179 /* already hacked */ || main_ret == 0 /* success */)
+{
+    alert("You're all set!");
+    read_ptr_at(0);
+}
+else
+    alert("Jailbreak failed! Reboot your PS4 and try again.");
+</script>
+</body>
 </html>
